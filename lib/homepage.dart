@@ -30,25 +30,25 @@ class HomePage extends StatelessWidget {
               onPressed: () {
                 launchUrl(url);
               },
-              child: Text('Press Me')),
+              child: Text('Go to website')),
           SizedBox(height: 20,),
           ElevatedButton(
               onPressed: () {
                 launchUrl(sms);
               },
-              child: Text('Press Me')),
+              child: Text('Massage Me')),
           SizedBox(height: 20,),
           ElevatedButton(
               onPressed: () {
                 launchUrl(emailLaunchUri);
               },
-              child: Text('Press Me')),
+              child: Text('Email Me')),
           SizedBox(height: 20,),
           ElevatedButton(
               onPressed: () {
-                launchUrl(emailLaunchUri);
+                launchUrl(phoneLaunchUri);
               },
-              child: Text('Press Me')),
+              child: Text('Call Me')),
         ],
       ),
     );
