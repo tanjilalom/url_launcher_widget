@@ -24,12 +24,32 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: ElevatedButton(
-            onPressed: () {
-              launchUrl(emailLaunchUri);
-            },
-            child: Text('press')),
+      body: Column(
+        children: [
+          ElevatedButton(
+              onPressed: () {
+                launchUrl(url);
+              },
+              child: Text('Press Me')),
+          SizedBox(height: 20,),
+          ElevatedButton(
+              onPressed: () {
+                launchUrl(sms);
+              },
+              child: Text('Press Me')),
+          SizedBox(height: 20,),
+          ElevatedButton(
+              onPressed: () {
+                launchUrl(emailLaunchUri);
+              },
+              child: Text('Press Me')),
+          SizedBox(height: 20,),
+          ElevatedButton(
+              onPressed: () {
+                launchUrl(emailLaunchUri);
+              },
+              child: Text('Press Me')),
+        ],
       ),
     );
   }
