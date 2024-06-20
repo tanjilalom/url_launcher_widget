@@ -6,50 +6,53 @@ class HomePage extends StatelessWidget {
 
   static Uri url = Uri.parse("https://www.facebook.com");
 
-  static Uri sms = Uri(
+  static Uri smsLaunch = Uri(
     scheme: 'sms',
-    path: '01830579119',
+    path: '0123456789',
   );
 
-  final Uri emailLaunchUri = Uri(
+  final Uri emailLaunch = Uri(
     scheme: 'mailto',
     path: 'smith@example.com',
   );
 
-  final Uri phoneLaunchUri = Uri(
+  final Uri phoneLaunch = Uri(
     scheme: 'tel',
-    path: '01830579119',
+    path: '123456789',
   );
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          ElevatedButton(
-              onPressed: () {
-                launchUrl(url);
-              },
-              child: Text('Go to website')),
-          SizedBox(height: 20,),
-          ElevatedButton(
-              onPressed: () {
-                launchUrl(sms);
-              },
-              child: Text('Massage Me')),
-          SizedBox(height: 20,),
-          ElevatedButton(
-              onPressed: () {
-                launchUrl(emailLaunchUri);
-              },
-              child: Text('Email Me')),
-          SizedBox(height: 20,),
-          ElevatedButton(
-              onPressed: () {
-                launchUrl(phoneLaunchUri);
-              },
-              child: Text('Call Me')),
-        ],
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(
+                onPressed: () {
+                  launchUrl(url);
+                },
+                child: Text('Go to website')),
+            SizedBox(height: 20,),
+            ElevatedButton(
+                onPressed: () {
+                  launchUrl(smsLaunch);
+                },
+                child: Text('Massage Me')),
+            SizedBox(height: 20,),
+            ElevatedButton(
+                onPressed: () {
+                  launchUrl(emailLaunch);
+                },
+                child: Text('Email Me')),
+            SizedBox(height: 20,),
+            ElevatedButton(
+                onPressed: () {
+                  launchUrl(phoneLaunch);
+                },
+                child: Text('Call Me')),
+          ],
+        ),
       ),
     );
   }
