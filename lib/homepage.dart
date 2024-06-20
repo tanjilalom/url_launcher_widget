@@ -7,8 +7,8 @@ class HomePage extends StatelessWidget {
   static Uri url = Uri.parse("https://www.facebook.com");
 
   static Uri sms = Uri(
-      scheme: 'sms',
-      path: '01830579119',
+    scheme: 'sms',
+    path: '01830579119',
   );
 
   final Uri emailLaunchUri = Uri(
